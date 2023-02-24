@@ -1,0 +1,18 @@
+﻿@using System.Security.Claims;
+<h1 style="color:blue">
+    Perfil de @Context.User.Identity.Name
+</h1>
+
+<h2 style="color:red">
+    Oficio: @Context.User.FindFirst(ClaimTypes.Role)
+</h2>
+
+<h2 style="color:green">
+    Sueldo: @Context.User.FindFirst("Sueldo")
+</h2>
+
+<a asp-controller="Empleados"
+    asp-action="CompisCurro">
+    Compis de curro
+</a>
+
